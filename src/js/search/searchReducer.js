@@ -36,8 +36,7 @@ export default function searchReducer (state = defaultState, action) {
                     city: payload.data.name,
                     date: moment().format('l'),
                     time: moment().format('h:mm:ss a') 
-                  }
-                  ]
+                }]
                     
             };
         }
