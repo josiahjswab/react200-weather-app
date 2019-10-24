@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const defaultState = {
         city: '',
         temp: '',
@@ -6,8 +8,10 @@ const defaultState = {
         pressure: '',
         humidity: '',
         speed: '',
-        lat: '',
-        lon: '',
+        lat: '0',
+        lon: '0',
+        icon: '50d',
+        history: [],
         
 };
 
@@ -26,7 +30,15 @@ export default function searchReducer (state = defaultState, action) {
                 humidity: payload.data.main.humidity,
                 speed: payload.data.wind.speed,
                 lat: payload.data.coord.lat,
-                lon: payload.data.coord.lon
+                lon: payload.data.coord.lon,
+                icon: payload.data.weather[0].icon,
+                history: [...state.history,{
+                    city: payload.data.name,
+                    date: moment().format('l'),
+                    time: moment().format('h:mm:ss a') 
+                  }
+                  ]
+                    
             };
         }
         case 'UPDATE_CITY': {

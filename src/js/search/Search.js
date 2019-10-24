@@ -30,8 +30,14 @@ clickHandler(event) {
             <div id='search'>
                 <Tabs/>
                 <div>
-                    <input id='search-input' type='text' value={city} onChange={this.handleCityInput} />
-                    <button id='search-button' type='submit' onClick={this.clickHandler}>Go!</button>
+                    <input 
+                        id='search-input' 
+                        type='text' 
+                        value={city} 
+                        onChange={this.handleCityInput}
+                        placeholder='type city name here'
+                        />
+                    <button id='search-button' type='submit' onClick={this.clickHandler}>Get Weather!</button>
                 </div>
             </div>
         );
