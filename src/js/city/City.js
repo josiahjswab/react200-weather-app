@@ -6,37 +6,38 @@ export default class City extends React.Component{
     }
 
     render(){
+        const { city, temp, tempMin, tempMax, pressure, humidity, speed, lon, lat } = this.props;
         return(
             <div id='city'>
                 <div className='header'>City Information</div>
                 <div className='city-info'>
-                    <h1>Tokyo</h1>
-                    <small>Lat/Long 35.69, 139.69</small>
+                    <h1>{city}</h1>
+                    <small>{lat}/{lon}</small>
                 </div>
                 <div className='city-stats'>
                     <div>
                         <p>Temperature</p>
-                        <h5>65.62F</h5>
+                        <h5>{temp}</h5>
                     </div>
                     <div>                        
                         <p>Lowest Temp</p>
-                        <h5>62.01F</h5>
+                        <h5>{tempMin}</h5>
                     </div>
                     <div>
                         <p>Highest Temp</p>
-                        <h5>71.01F</h5>                        
+                        <h5>{tempMax}</h5>                        
                     </div>
                     <div>
                         <p>Pressure</p>
-                        <h5>997</h5>
+                        <h5>{pressure}</h5>
                     </div>
                     <div>
                         <p> Wind Speed</p>
-                        <h5>24.16mph</h5>                        
+                        <h5>{speed}</h5>                        
                     </div>
                     <div>
                         <p>Humidity</p>
-                        <h5>39%</h5>                        
+                        <h5>{humidity}</h5>                        
                     </div>
                 </div>
             </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './header/Header';
-import Search from './search/Search';
-import City from './city/City';
-import History from './history/History';
+import Search from './search';
+import City from './city';
+import History from './history';
 
 export default class App extends React.Component {
   render() {
