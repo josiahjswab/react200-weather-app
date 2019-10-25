@@ -35,7 +35,9 @@ export default function searchReducer (state = defaultState, action) {
                 history: [...state.history,{
                     city: payload.data.name,
                     date: moment().format('l'),
-                    time: moment().format('h:mm:ss a') 
+                    time: moment().format('h:mm:ss a'),
+                    lat: payload.data.coord.lat,
+                    lon: payload.data.coord.lon
                 }]
                     
             };

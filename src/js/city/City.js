@@ -13,7 +13,6 @@ export default class City extends React.Component{
                 <div className='city-info'>
                     <div>
                         <h1>{city}</h1>
-                        <small>lat:{lat} lon:{lon}</small>    
                     </div>
                     <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
                 </div>

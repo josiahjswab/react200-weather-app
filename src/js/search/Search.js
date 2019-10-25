@@ -1,7 +1,6 @@
 import React from 'react';
 import { updateCity, getWeather } from './searchActions';
 import PropTypes from 'prop-types';
-import Tabs from './Tabs';
 
 export default class Search extends React.Component{
     constructor(props){
@@ -9,10 +8,10 @@ export default class Search extends React.Component{
 
         this.handleCityInput=this.handleCityInput.bind(this);
         this.clickHandler=this.clickHandler.bind(this);
+        this.clickTab=this.clickTab.bind(this);
     }
 
 handleCityInput(event) {
-    //dispatch is provided by connect
     const { dispatch } = this.props;
     const { value } = event.target;
     dispatch(updateCity(value));
@@ -24,11 +23,25 @@ clickHandler(event) {
     dispatch(getWeather(city));
 }
 
+clickTab(event) {
+    console.log('click');
+    event.preventDefault();
+    const { dispatch } = this.props;
+    const { city } = event.target.value;
+    dispatch(updateCity(city));
+}
+
     render(){
         const { city } = this.props;
         return(
             <div id='search'>
-                <Tabs/>
+                <div className='tabs'>
+                    <button value='Warsaw' onClick={this.clickTab}>Warsaw</button>
+                    <button>Bejing</button>
+                    <button>Paris</button>
+                    <button>Venice</button>
+                    <button>Los Angeles</button>
+                </div>
                 <div>
                     <input 
                         id='search-input' 

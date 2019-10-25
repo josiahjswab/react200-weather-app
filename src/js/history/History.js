@@ -7,7 +7,7 @@ export default class History extends React.Component {
 
     render(){
 
-        const { history } = this.props;
+        const { history, lat ,lon } = this.props;
 
         return(
             <div id='history'>
@@ -16,6 +16,9 @@ export default class History extends React.Component {
                     <ul>
                         { history.map(search => (
                             <li key={search.time}>
+                                <a target='_blank' href={`https://maps.google.com/?q=${search.lat},${search.lon}`}>
+                                    <button><i className="fas fa-crosshairs"></i></button>
+                                </a>
                                 <p> { search.city } </p>
                                 <div>
                                     <p> {search.date} </p>
