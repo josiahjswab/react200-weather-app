@@ -5,30 +5,43 @@
 @box1: 1px solid blue;
 @box2: 1px solid red;
 @box3: 1px solid green;
-@grey: rgba(129, 189, 224, 0.459);
+@yellow: rgba(255, 240, 33, 0.712);
 @margin: 20px 0px 20px 0px;
+body {
+    background-image: url("./sunset.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
 .container {
     max-width: 70%;
-    border: @box1;
+    min-width: 70%;
     padding: 0;
-    background-color: rgba(129, 189, 224, 0.116);
+    font-size: 1rem;
 }
 #header {
+    background-color: rgba(255, 242, 66, 0.836);
     display: flex;
     min-width: 100%;
     min-height: 15vh;
-    background-color: @grey;
-    border: @box2;
     align-items: center;
     justify-content: center;
     border-radius: 1vh;
+    font-size: 200%;
+    h1{
+    }
 }
 #search {
+    background-color: rgba(255, 255, 255, 0.719);
     min-width: 100%;
     min-height: 9vh;
     margin: @margin;
-    border: @box3;
     border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .tabs {
         display: flex;
         flex-direction: row;
@@ -43,9 +56,9 @@
             align-content: center;
             border-top-left-radius: 1vh;
             border-top-right-radius: 1vh;
-            background-color: @grey;
+            background-color: @yellow;
             &:hover {
-                background-color: darken(@grey, 20%);
+                background-color: darken(@yellow, 20%);
                 cursor: pointer;
                 outline: 0;
             }
@@ -57,26 +70,37 @@
             }
         }
     }
-    div {
-        display: flex;
-        justify-content: center;
-        input {
-            min-width: 30%;
-        }
-        button {
-            min-width: 10%;
-            margin-left: 1vh;
-        }     
+    input {
+        min-width: 30%;
+        border-radius: 2vh;
+        padding-left: 1vw;
+        margin-right: 1vw;
+        box-shadow:
+            0 0 0 1px #000,
+            0 0 0 2px #999,
+            0 0 0 3px rgb(151, 102, 38),
+            0 0 0 6px rgb(66, 57, 151),
     }
+    #search-button {
+        min-width: 10%;
+        margin-left: 1vw;
+        border-radius: 1vh;
+        box-shadow:
+            0 0 0 1px #000,
+            0 0 0 2px #999,
+            0 0 0 3px rgb(151, 102, 38),
+            0 0 0 6px rgb(66, 57, 151),
+    }     
 }
+
 #column-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 #city {
-    min-width: 49%;
-    border: @box3;
+    background-color: rgba(255, 255, 255, 0.719);
+    max-width: 49%;
     border-radius: 1vh;
     .city-info {
         display: flex;
@@ -102,8 +126,9 @@
         justify-content: center;
         align-items: center;
         div {
+            background-color:  rgba(255, 255, 255, 0.719);
             text-align: center;
-            border: 1px solid  @grey;
+            border: 1px solid  @yellow;
             min-width: 15vh;
             min-height: 15vh;
             margin: 1vh;
@@ -116,17 +141,18 @@
     }
 }
 #history {
+    background-color: rgba(255, 255, 255, 0.719);
+    max-width: 49%;
     min-width: 49%;
     min-height: 50vh;
-    border: @box3;
     border-radius: 1vh;
     .table ul li {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid rgba(129, 189, 224, 0.459);
-        font-size: 80%;
+        border-bottom: 1px solid rgba(65, 65, 65, 0.972);
+        font-size: 90%;
         padding: 1vh 1vh;
         a button {
             padding: 0 4px;
@@ -141,7 +167,7 @@
     display: flex;
     align-items: center;
     min-height: 5vh;
-    background-color: @grey;
+    background-color: @yellow;
     border-radius: 1vh;
     padding-left: 2vh;
 }
