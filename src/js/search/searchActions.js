@@ -6,7 +6,7 @@ export function getWeather(city) {
   console.log(typeof city);
   return {
     type: 'GET_WEATHER',
-    payload: axios.get(`/weather/${ city }`)
+    payload: axios.get(`/search/${ city }`)
   };
 }
 
