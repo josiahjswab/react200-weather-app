@@ -14,7 +14,7 @@ export default class City extends React.Component{
                     <div>
                         <h1>{city}</h1>
                     </div>
-                    <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
+                    <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`}/>
                 </div>
                 <div className='city-stats'>
                     <div>
