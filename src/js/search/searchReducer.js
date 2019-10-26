@@ -44,7 +44,8 @@ export default function searchReducer (state = defaultState, action) {
         }
         case "GET_WEATHER-REJECTED": {
             return {
-            
+                ...state,
+                error: "something went wrong."
             };
         }
         case 'UPDATE_CITY': {

@@ -1,5 +1,4 @@
 import axios from "axios";
-import Search from "./Search";
 
 //Action Creators
 export function getWeather(city) {
@@ -10,6 +9,7 @@ export function getWeather(city) {
     payload: axios.get(`/weather/${ city }`)
   };
 }
+
 export function updateCity(city) {
   return {
     type: 'UPDATE_CITY',
