@@ -42,6 +42,11 @@ export default function searchReducer (state = defaultState, action) {
                     
             };
         }
+        case "GET_WEATHER-REJECTED": {
+            return {
+            
+            };
+        }
         case 'UPDATE_CITY': {
             return {
                 ...state,
