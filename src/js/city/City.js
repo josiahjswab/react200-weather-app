@@ -6,13 +6,15 @@ export default class City extends React.Component{
     }
 
     render(){
-        const { city, temp, tempMin, tempMax, pressure, humidity, speed, lon, lat } = this.props;
+        const { city, temp, tempMin, tempMax, pressure, humidity, speed, lon, lat, icon } = this.props;
         return(
             <div id='city'>
                 <div className='header'>City Information</div>
                 <div className='city-info'>
-                    <h1>{city}</h1>
-                    <small>{lat}/{lon}</small>
+                    <div>
+                        <h1>{city}</h1>
+                    </div>
+                    <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
                 </div>
                 <div className='city-stats'>
                     <div>

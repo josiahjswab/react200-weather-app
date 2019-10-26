@@ -8,7 +8,7 @@ export default class Header extends React.Component {
     render(){
         return(
             <div id='header'>
-                <h1>🌚 Weather App 🌝</h1>
+                <h1>Weather App</h1>
             </div>
         );
     }
